@@ -26,3 +26,16 @@ li a {
 li a:hover {
   background-color: #111;
 }
+
+.logOutBtn {
+  margin-left: 10px;
+  border: none;
+  text-align: center;
+  background-color: #e7e7e7; color: black;
+  font-size: 16px;
+}
+
+.logOutBtn:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
