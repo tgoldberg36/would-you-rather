@@ -4,6 +4,10 @@ import { BrowserRouter as Router, Route} from 'react-router-dom'
 import { connect } from 'react-redux'
 import LoadingBar from 'react-redux-loading'
 import Leaderboard from './Leaderboard'
+import Login from './Login'
+import Dashboard from './Dashboard'
+import CreateQuestion from './CreateQuestion'
+import Nav from './Nav'
 
 class App extends Component {
   componentDidMount() {
@@ -15,10 +19,14 @@ class App extends Component {
       <Router>
         <Fragment>
           <LoadingBar />
+          <Nav />
           {this.props.loading === true 
             ? null
             : <div>
-              <Route path='/' exact component={Leaderboard} />
+              <Route path='/' exact component={Login} />
+              <Route path='/home' exact component={Dashboard} />
+              <Route path='/add' exact component={CreateQuestion} />
+              <Route path='/leaderboard' exact component={Leaderboard} />
             </div>
           }
         </Fragment>
