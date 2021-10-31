@@ -43,7 +43,7 @@ class Dashboard extends Component {
           <button className={'dashBoardBtn'} onClick={this.handleQuestionCategory} value={'Unanswered Questions'}>Unanswered Questions</button>
           <button className={'dashBoardBtn'} onClick={this.handleQuestionCategory} value={'Answered Questions'}>Answered Questions</button>
         </div>
-        <div className={'questionContainer'}>
+        {/* <div className={'questionContainer'}> */}
           { questionCategory === 'Unanswered Questions' && 
             <ul className={'questionList'}>
               { unanswered.map((q) => 
@@ -58,7 +58,7 @@ class Dashboard extends Component {
                 <Question id={q.id} />
               </li>)}
             </ul>}
-        </div>
+        {/* </div> */}
       </div>
     )
   }

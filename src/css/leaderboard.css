@@ -1,0 +1,14 @@
+.leaderboardContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profilePicContainer {
+  text-align: center;
+  border: solid 1px grey;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+}

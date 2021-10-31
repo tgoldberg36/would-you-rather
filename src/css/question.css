@@ -1,0 +1,12 @@
+.questionContainer {
+  text-align: center;
+  border: solid 1px grey;
+  border-radius: 5px;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 10px;
+}
+
+.voteBtn{
+  padding: 10px;
+}

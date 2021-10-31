@@ -8,23 +8,23 @@ class Nav extends Component {
     return (
       <div className='navBar'>
         {this.props.authedUser ? (
-          <ul>
-          <li>
+          <ul className={'navList'}>
+          <li className={'navListElement'}>
             <NavLink to='/home' exact activeClassName='active'>
               Home
             </NavLink>
           </li>
-          <li>
+          <li className={'navListElement'}>
             <NavLink to='/add' exact activeClassName='active'>
               New Question
             </NavLink>
           </li>
-          <li>
+          <li className={'navListElement'}>
             <NavLink to='/leaderboard' exact activeClassName='active'>
               Leaderboard
             </NavLink>
           </li>
-          <li style={{ float : 'right'}}>
+          <li className={'navListElement'} style={{ float : 'right'}}>
             <NavLink to='/' exact activeClassName='active'>
             {this.props.user ? this.props.user.name : null}
             <button className='logOutBtn'>Log Out</button>
@@ -32,8 +32,8 @@ class Nav extends Component {
           </li>
         </ul>
         ) : (
-          <ul>
-            <li>Log in to ask a question</li>
+          <ul className={'navList'}>
+            <li className={'navListElement'}>Log in to ask a question</li>
           </ul>
         )}
         

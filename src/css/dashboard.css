@@ -1,25 +1,16 @@
-.question, .questionList{
-  background-color: white;
-}
-
-.dashboardContainer {
+.dashboardContainer{
+  display: flex;
+  justify-content: center;
   text-align: center;
-  border: solid 1px grey;
-  border-radius: 5px;
-  margin: 20px;
-  padding: 10px;
+  flex-direction: column;
 }
 
 .btnContainer{
-  display: flex;
-  justify-content: center;
+  padding: 0px;
+  margin-top: 5px;
 }
 
-.questionContainer{
-  display: flex;
-  justify-content: center;
-  width: 200px;
-  text-align: center;
-  display: block;
-  justify-content: center;
+.dashBoardBtn{
+  padding: 10px;
+  margin: 5px;
 }

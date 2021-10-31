@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import '../css/question.css'
 
 class Question extends Component {
@@ -16,6 +17,9 @@ class Question extends Component {
           <h5>Would you rather:</h5>
             <p>A: {question.optionOne.text}</p>
             <p>B: {question.optionTwo.text}</p>
+          <Link to={`/question/${questionId}`}>
+            <button className="voteBtn">VOTE</button>
+          </Link>
         </div>
       </div>
     )
