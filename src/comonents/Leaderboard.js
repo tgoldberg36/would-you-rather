@@ -11,7 +11,8 @@ class Leaderboard extends Component {
     return (
       <div className="leaderboardContainer">
         <h2>Leaderboard</h2>
-        {leaderboardPlacements.sort((a, b) => b.points - a.points).map(user => (
+        {console.log(leaderboardPlacements.sort((a, b) => b.totalPoints - a.totalPoints))}
+        {leaderboardPlacements.sort((a, b) => b.totalPoints - a.totalPoints).map(user => (
           <div key={user.id}>
             <div className="profilePicContainer">
               <h3 className="user">
@@ -23,7 +24,7 @@ class Leaderboard extends Component {
               />
               <h4>{user.totalPoints} Points</h4>
               <p>Questions answered: {Object.keys(users[user.id].answers).length}</p>
-              <p>Questions asked: {Object.keys(users[user.id].questions).length}</p>
+              <p>Questions asked: {users[user.id].questions.length}</p>
             </div>
           </div>
         ))}
@@ -40,7 +41,7 @@ function mapStateToProps({ users }) {
     id: id,
     totalPoints:
       Object.keys(users[id].answers).length +
-      Object.keys(users[id].questions).length
+      users[id].questions.length
   }))
 
   return {
