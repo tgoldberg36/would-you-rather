@@ -43,21 +43,22 @@ class Dashboard extends Component {
           <button className={'dashBoardBtn'} onClick={this.handleQuestionCategory} value={'Unanswered Questions'}>Unanswered Questions</button>
           <button className={'dashBoardBtn'} onClick={this.handleQuestionCategory} value={'Answered Questions'}>Answered Questions</button>
         </div>
-        {console.log(answered, unanswered)}
-        { questionCategory === 'Unanswered Questions' && 
-          <ul className={'questionList'}>
-            { unanswered.map((q) => 
-            <li className={'question'}>
-              <Question id={q.id} />
-            </li>)}
-          </ul>}
-        { questionCategory === 'Answered Questions' && 
-          <ul className={'questionList'}>
-            { answered.map((q) => 
-            <li className={'question'}>
-              <Question id={q.id} />
-            </li>)}
-          </ul>}
+        <div className={'questionContainer'}>
+          { questionCategory === 'Unanswered Questions' && 
+            <ul className={'questionList'}>
+              { unanswered.map((q) => 
+              <li className={'question'}>
+                <Question id={q.id} />
+              </li>)}
+            </ul>}
+          { questionCategory === 'Answered Questions' && 
+            <ul className={'questionList'}>
+              { answered.map((q) => 
+              <li className={'question'}>
+                <Question id={q.id} />
+              </li>)}
+            </ul>}
+        </div>
       </div>
     )
   }

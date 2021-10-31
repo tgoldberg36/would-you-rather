@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import '../css/question.css'
 
 class Question extends Component {
   render() {
