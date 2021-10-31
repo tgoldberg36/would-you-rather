@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import '../css/createquestion.css'
 import { Redirect } from 'react-router-dom'
-import { handleSaveQuestion } from '../actions/questions'
+import { handleAddQuestion } from '../actions/questions'
 
 class CreateQuestion extends Component {
 
@@ -24,10 +24,10 @@ class CreateQuestion extends Component {
     e.preventDefault()
 
     const { option1, option2 } = this.state
-    const { dispatch, authedUser } = this.props
+    const { dispatch } = this.props
 
     if(option1.length > 0 && option2.length > 0){
-      dispatch(handleSaveQuestion({option1,option2,authedUser}))
+      dispatch(handleAddQuestion(option1,option2))
       .then(() => 
         this.setState(() => ({
           toHome: true
