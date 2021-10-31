@@ -1,0 +1,12 @@
+.createQuestionContainer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.submitBtn{
+  padding: 5px;
+  margin: 10px;
+  font-size: 16px;
+}

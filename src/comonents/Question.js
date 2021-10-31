@@ -18,7 +18,7 @@ class Question extends Component {
             <p>A: {question.optionOne.text}</p>
             <p>B: {question.optionTwo.text}</p>
           <Link to={`/question/${questionId}`}>
-            <button className="voteBtn">VOTE</button>
+            <button className="voteBtn">View/Vote</button>
           </Link>
         </div>
       </div>

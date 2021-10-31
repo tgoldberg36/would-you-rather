@@ -6,7 +6,7 @@ import { showLoading, hideLoading } from 'react-redux-loading'
 
 const AUTHED_ID = 'tylermcginnis'
 
-export function handleInitialData () {
+export function handleInitialData (userID) {
   return (dispatch) => {
     dispatch(showLoading())
     return getInitialData()
@@ -14,6 +14,7 @@ export function handleInitialData () {
         dispatch(receiveUsers(users))
         dispatch(receiveQuestions(questions))
         dispatch(setAuthedUser(AUTHED_ID))
+        //dispatch(setAuthedUser(userId ? userId : null))
         dispatch(hideLoading())
       })
   }
