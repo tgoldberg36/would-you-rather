@@ -44,7 +44,7 @@ class Login extends Component {
     return (
       <div className={'loginContainer'}>
         <h2>Welcome to Would You Rather!</h2>
-        <p>Select a user to login</p>
+        <p>Select a user to enter</p>
         <div className={'loginSelector'}>
           <select onChange={this.setUser}>
             <option value={''}>
