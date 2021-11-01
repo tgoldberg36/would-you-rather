@@ -8,6 +8,8 @@ import Login from './Login'
 import Dashboard from './Dashboard'
 import CreateQuestion from './CreateQuestion'
 import Nav from './Nav'
+import PrivateRoute  from './PrivateRoute'
+import Poll from './Poll'
 
 class App extends Component {
   componentDidMount() {
@@ -24,9 +26,13 @@ class App extends Component {
             ? null
             : <div>
               <Route path='/' exact component={Login} />
-              <Route path='/home' exact component={Dashboard} />
-              <Route path='/add' exact component={CreateQuestion} />
-              <Route path='/leaderboard' exact component={Leaderboard} />
+              <PrivateRoute path='/home' exact component={Dashboard} />
+              <PrivateRoute path='/add' exact component={CreateQuestion} />
+              <PrivateRoute path='/leaderboard' exact component={Leaderboard} />
+              <PrivateRoute
+                  path="/question/:id"
+                  component={Poll}
+              />
             </div>
           }
         </Fragment>

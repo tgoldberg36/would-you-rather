@@ -4,6 +4,7 @@ import { showLoading, hideLoading  } from "react-redux-loading"
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
 export const ADD_QUESTION = 'ADD_QUESTION'
+export const ANSWER_QUESTION = 'ANSWER_QUESTION'
 
 export function receiveQuestions(questions) {
   return {
@@ -19,11 +20,17 @@ function addQuestion (question) {
   }
 }
 
+export function answerQuestion ( { authedUser, qid, answer} ) {
+  return {
+    type: ANSWER_QUESTION,
+    authedUser,
+    qid,
+    answer
+  }
+}
+
 
 export function handleAddQuestion(option1, option2) {
-
-  console.log(option1)
-  
   return (dispatch, getState) => {
 
     const { authedUser } = getState();
@@ -37,8 +44,8 @@ export function handleAddQuestion(option1, option2) {
     .then((res) => {
       dispatch(addQuestion(res))
       dispatch(addQuestionToUser(res))
+      dispatch(hideLoading())
     })
-      .then(() => dispatch(hideLoading()))
   }
 }
   
