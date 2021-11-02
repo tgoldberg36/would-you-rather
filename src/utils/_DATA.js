@@ -2,7 +2,7 @@ let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL:'https://cdn.onlinewebfonts.com/svg/img_181369.png',
+    avatarURL:'https://www.teenwiseseattle.com/wp-content/uploads/2017/04/default_avatar.png',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +14,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: 'https://cdn.onlinewebfonts.com/svg/img_181369.png',
+    avatarURL: 'https://www.teenwiseseattle.com/wp-content/uploads/2017/04/default_avatar.png',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: 'https://cdn.onlinewebfonts.com/svg/img_181369.png',
+    avatarURL: 'https://www.teenwiseseattle.com/wp-content/uploads/2017/04/default_avatar.png',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
