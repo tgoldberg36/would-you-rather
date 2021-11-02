@@ -56,11 +56,13 @@ class Poll extends Component {
     return (
       <div className="pollContainer">
         <h4>{author.name} asks ...</h4>
-        <img 
-          alt={`Avatar of ${author.avatarURL}`} 
-          src={`${author.avatarURL}`}
-          className={'pollPic'}
-        />
+        <div>
+          <img 
+            alt={`Avatar of ${author.avatarURL}`} 
+            src={`${author.avatarURL}`}
+          />
+        </div>
+        
         
         {questionAnswered ? (
           <>
