@@ -45,14 +45,14 @@ class Dashboard extends Component {
         </div>
         { questionCategory === 'Unanswered Questions' && 
           <ul className={'questionList'}>
-            { unanswered.map((q) => 
+            { unanswered.sort((a, b) => b.timestamp - a.timestamp).map((q) => 
             <li key={q.id} className={'question'}>
               <Question id={q.id} />
             </li>)}
           </ul>}
         { questionCategory === 'Answered Questions' && 
           <ul className={'questionList'}>
-            { answered.map((q) => 
+            { answered.sort((a, b) => b.timestamp - a.timestamp).map((q) => 
             <li key={q.id} className={'question'}>
               <Question id={q.id} />
             </li>)}
