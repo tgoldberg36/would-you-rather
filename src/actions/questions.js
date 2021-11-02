@@ -20,12 +20,10 @@ function addQuestion (question) {
   }
 }
 
-export function answerQuestion ( { authedUser, qid, answer} ) {
+export function answerQuestion ( info ) {
   return {
     type: ANSWER_QUESTION,
-    authedUser,
-    qid,
-    answer
+    info,
   }
 }
 

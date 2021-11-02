@@ -11,7 +11,6 @@ class Leaderboard extends Component {
     return (
       <div className="leaderboardContainer">
         <h2>Leaderboard</h2>
-        {console.log(leaderboardPlacements.sort((a, b) => b.totalPoints - a.totalPoints))}
         {leaderboardPlacements.sort((a, b) => b.totalPoints - a.totalPoints).map(user => (
           <div key={user.id}>
             <div className="profilePicContainer">

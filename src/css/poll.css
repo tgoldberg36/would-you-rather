@@ -1,0 +1,15 @@
+.pollContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: solid 1px grey;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.pollPic{
+  width: 200px;
+  margin-left: 38%;
+}

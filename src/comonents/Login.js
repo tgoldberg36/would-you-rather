@@ -12,7 +12,6 @@ class Login extends Component {
   }
 
   setUser = (e) => {
-    console.log(e)
     this.setState(() => ({
       id: e.target.value
     }))
