@@ -19,7 +19,7 @@ function getAnsweredQuestions(questions, authedUser){
 class Dashboard extends Component {
 
   state = {
-    questionCategory: 'Unanswered Questions',
+    questionCategory: 'Unanswered',
   }
 
   handleQuestionCategory = e => {
@@ -40,17 +40,17 @@ class Dashboard extends Component {
     return (
       <div className={'dashboardContainer'}>
         <div className={'btnContainer'}>
-          <button className={'dashBoardBtn'} onClick={this.handleQuestionCategory} value={'Unanswered Questions'}>Unanswered Questions</button>
-          <button className={'dashBoardBtn'} onClick={this.handleQuestionCategory} value={'Answered Questions'}>Answered Questions</button>
+          <button className={'dashBoardBtn'} onClick={this.handleQuestionCategory} value={'Unanswered'}>Unanswered Questions</button>
+          <button className={'dashBoardBtn'} onClick={this.handleQuestionCategory} value={'Answered'}>Answered Questions</button>
         </div>
-        { questionCategory === 'Unanswered Questions' && 
+        { questionCategory === 'Unanswered' && 
           <ul className={'questionList'}>
             { unanswered.sort((a, b) => b.timestamp - a.timestamp).map((q) => 
             <li key={q.id} className={'question'}>
               <Question id={q.id} />
             </li>)}
           </ul>}
-        { questionCategory === 'Answered Questions' && 
+        { questionCategory === 'Answered' && 
           <ul className={'questionList'}>
             { answered.sort((a, b) => b.timestamp - a.timestamp).map((q) => 
             <li key={q.id} className={'question'}>

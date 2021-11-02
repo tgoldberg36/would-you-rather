@@ -39,10 +39,7 @@ class CreateQuestion extends Component {
     
   }
 
-   
-
   render() {
-
     const {option1,option2,toHome} = this.state
 
     if(toHome){
@@ -55,22 +52,23 @@ class CreateQuestion extends Component {
         <form onSubmit={this.handleSubmit}>
           <p style={{margin: '2px'}}>Would you rather...</p>
           <input
+            name="option1"
             style={{width: '300px'}}
             placeholder="Option One"
             onChange={this.handleChange}
             value={option1}
-            name="option1"
+            
           />
-          <br />
+          <p />
           <p style={{margin: '0px'}}>or</p>
           <input
+            name="option2"
             style={{width: '300px'}}
             placeholder="Option Two"
             onChange={this.handleChange}
             value={option2}
-            name="option2"
           />
-          <br />
+          <p />
           <button className={'submitBtn'} type="submit">
             Submit question
           </button>
