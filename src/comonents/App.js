@@ -10,6 +10,7 @@ import CreateQuestion from './CreateQuestion'
 import Nav from './Nav'
 import PrivateRoute  from './PrivateRoute'
 import Poll from './Poll'
+import Error from './Error'
 
 class App extends Component {
   componentDidMount() {
@@ -30,9 +31,10 @@ class App extends Component {
               <PrivateRoute path='/add' exact component={CreateQuestion} />
               <PrivateRoute path='/leaderboard' exact component={Leaderboard} />
               <PrivateRoute
-                  path="/question/:id"
+                  path="/questions/:id"
                   component={Poll}
               />
+              <Route path={'/error'} component={Error} />
             </div>
           }
         </Fragment>

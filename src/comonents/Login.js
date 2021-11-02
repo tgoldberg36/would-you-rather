@@ -7,7 +7,7 @@ import '../css/login.css'
 class Login extends Component {
 
   state = {
-    toHome: false,
+    redirectToReferrer: false,
     id: '',
   }
 
@@ -25,7 +25,7 @@ class Login extends Component {
     if(this.state.id !== ''){
       dispatch(setAuthedUser(this.state.id))
       this.setState({
-        toHome: true,
+        redirectToReferrer: true,
       })
     }else{
       alert("Select A User")
@@ -33,11 +33,15 @@ class Login extends Component {
   }
 
   render() {
-    const { users } = this.props
-    const { toHome } = this.state
+    const { users, location } = this.props
+    const { redirectToReferrer } = this.state
 
-    if (toHome) {
-      return <Redirect to={'/home'} />
+    const { from } = location.state || {
+      from: { pathname: '/home' }
+    }
+
+    if (redirectToReferrer) {
+      return <Redirect to={from} />
     }
 
     return (

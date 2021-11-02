@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Component } from "react";
 
-export default function ErrorPage() {
-  return (
-    <div>
-      <h1>404 Error!</h1>
-    </div>
-  )
+class Error extends Component {
+  render() {
+    return (
+      <div className="not-found">
+        <h3>404 Error:Not Found</h3>
+      </div>
+    );
+  }
 }
+
+export default Error;

@@ -17,7 +17,7 @@ class Question extends Component {
           <h5>Would you rather:</h5>
             <p>A: {question.optionOne.text}</p>
             <p>B: {question.optionTwo.text}</p>
-          <Link to={`/question/${questionId}`}>
+          <Link to={`/questions/${questionId}`}>
             <button className="voteBtn">View/Vote</button>
           </Link>
         </div>

@@ -53,6 +53,21 @@ class Nav extends Component {
         </ul>
         ) : (
           <ul className={'navList'}>
+            <li className={'navListElement'}>
+              <NavLink to='/home' exact activeClassName='active'>
+                Home
+              </NavLink>
+            </li>
+            <li className={'navListElement'}>
+              <NavLink to='/add' exact activeClassName='active'>
+                New Question
+              </NavLink>
+            </li>
+            <li className={'navListElement'}>
+              <NavLink to='/leaderboard' exact activeClassName='active'>
+                Leaderboard
+              </NavLink>
+            </li>
             <li className={'navListElement'} style={{ float : 'right'}}>
               <NavLink to='/' exact activeClassName='active'>
                 Log in to ask a question
