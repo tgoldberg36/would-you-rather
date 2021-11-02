@@ -4,12 +4,12 @@ import '../css/leaderboard.css'
 
 class Leaderboard extends Component {
   render() {
-    const { users, leaderboardPlacements } = this.props
+    const { users, leaderboard } = this.props
 
     return (
       <div className="leaderboardContainer">
         <h2>Leaderboard</h2>
-        {leaderboardPlacements.sort((a, b) => b.totalPoints - a.totalPoints).map(user => (
+        {leaderboard.sort((a, b) => b.totalPoints - a.totalPoints).map(user => (
           <div key={user.id}>
             <div className="profilePicContainer">
               <h3 className="user">
@@ -19,9 +19,11 @@ class Leaderboard extends Component {
                 src={users[user.id].avatarURL}
                 alt={`Avatar of ${users[user.id].avatarURL}`}
               />
-              <h4>{user.totalPoints} Points</h4>
-              <p>Questions answered: {Object.keys(users[user.id].answers).length}</p>
-              <p>Questions asked: {users[user.id].questions.length}</p>
+              <div>
+                <p>Questions answered: {Object.keys(users[user.id].answers).length}</p>
+                <p>Questions asked: {users[user.id].questions.length}</p>
+                <h4>{user.totalPoints} Points</h4>
+              </div>
             </div>
           </div>
         ))}
@@ -34,7 +36,7 @@ class Leaderboard extends Component {
 
 function mapStateToProps({ users }) {
   const userIds = Object.keys(users)
-  const leaderboardPlacements = userIds.map(id => ({
+  const leaderboard = userIds.map(id => ({
     id: id,
     totalPoints:
       Object.keys(users[id].answers).length +
@@ -42,7 +44,7 @@ function mapStateToProps({ users }) {
   }))
 
   return {
-    leaderboardPlacements,
+    leaderboard,
     users
   }
 }
