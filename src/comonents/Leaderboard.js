@@ -35,8 +35,7 @@ class Leaderboard extends Component {
 
 
 function mapStateToProps({ users }) {
-  const userIds = Object.keys(users)
-  const leaderboard = userIds.map(id => ({
+  const leaderboard = Object.keys(users).map(id => ({
     id: id,
     totalPoints:
       Object.keys(users[id].answers).length +
